@@ -4,18 +4,25 @@
 
 
 valor = float(input("Digite o valor total da compra: "))
-desconto5 = (valor * 0.05)
-desconto10 = (valor * 0.10)
-desconto15 = (valor * 0.15)
 
 
 if valor < 100.00:
-    print("Sem Desconto")
+    desconto = 0
 elif valor <= 299.99:
-    desconto5 = print("5 % de desconto.") 
+        desconto = 5 
 elif valor <= 499.99:
-    desconto10 = print("10% de desconto")
+        desconto = 10
 else:
-    desconto15 = print("15% de desconto")
+        desconto = 15
+
+
+economia = valor * (desconto / 100)
+
+valorfinal = valor - economia
 
 print(f"Valor original: {valor}")
+
+print(f"Valor do Desconto: {economia}")
+
+print(f"Valor final: {valorfinal}")
+
